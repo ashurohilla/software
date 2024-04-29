@@ -7,7 +7,7 @@ import json
 async def send_messages():
     while True:
         try:
-            async with websockets.connect("ws://10.13.0.206:8000") as websocket:
+            async with websockets.connect("ws://10.13.0.248:8000") as websocket:
                 print("Connected to WebSocket server")
                 last_press_time = 0
                 delay = 0.2  # Delay in seconds between key press events

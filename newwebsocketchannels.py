@@ -3,12 +3,13 @@ import cv2
 import numpy as np
 import keyboard
 import websockets
+import json
 import  time
 
 async def receive_video_stream():
     while True:
         try:
-            async with websockets.connect("ws://10.13.0.210:8001") as websocket:
+            async with websockets.connect("ws://10.13.0.248:8001") as websocket:
                 print("Connected to video streaming endpoint")
                 while True:
                     frame_data = await websocket.recv()
